@@ -1,0 +1,142 @@
+body { /*outer lifer*/
+  background-color: #fff;
+  padding: 0px;
+  margin: 0px;
+  /* notice how this font style cascades through the children of the body */
+  font-family: "helvetica neue", arial, sans-serif;
+  color: #000;
+}
+
+h1 {
+  /* notice how this color gets overridden by other style declarations in the html */
+  color: #000;
+  font-size: 4em;
+  font-weight: normal;
+  margin: 0px;
+  letter-spacing: -2px;
+  background: #ddd; /*box on top*/
+}
+
+h2 { /*figure out your life stuff*/
+  margin: 0px;
+  color: #000;
+  font-weight: normal;
+  border-bottom: 10px solid #222;
+  background: #ddd; /*box on top*/
+}
+
+h3 {
+  display: block;
+  height: 20px;
+  margin: 10px;
+  background-color: #FFF;
+}
+
+h4 { /*latin stuff*/
+  font-size: 3em;
+  margin: 10px;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 0px solid #222;
+}
+
+h5 { 
+  text-align: center;
+  margin: 0px;
+  color: #000;
+  font-weight: normal;
+  border-bottom: 0px solid #222;
+  background: #ddd; /*box on top*/
+}
+
+
+h6 {
+  position: absolute;
+  left: 800px;
+  top: 120px;
+  font-size: 15px;
+  background-color: #ccffff;
+  height: 100px;
+}
+
+div.juw{
+  position: absolute;
+  left: 900px;
+  top: 150px;
+  font-size: 20px;
+  background-color: #ccffff;
+  height: 100px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    width: 100px;
+    height: 30px; 
+    background-color: #000;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+p.tight {
+  margin: 0px; /*after meal plan*/
+  margin-bottom: 0.5em;
+}
+
+/* unvisited links */
+a:link {
+  color: #fff;
+}
+
+a:hover {
+  color: #000;
+  background-color: #F00;
+}
+
+a:visited {
+  color:#CCC;
+}
+
+a:active {
+  color: #0F0;
+}
+
+div.az {
+
+  margin-top: 40px;
+}
+
+img.az {
+  width: 200px;
+  height: 200px;
+  border: 1px solid periwinkle;
+}
+
+div.az img {
+  width: 200px;
+  height: 200px;
+  border: 10px black;
+}
+
+div.az a:hover {
+  background-color: #000;
+}
+
+div.az a:hover {
+  background-color: #333;
+}
