@@ -25,9 +25,25 @@ function validateForm(event) {
 window.onload = function(event) {
   alert('Window (and document) has loaded. Delete this line from the js.');
   // Get the form element, so we can manipulate it.
-  var formNode = document.getElementById("myForm");
+  var formNode = document.getElementById("myForm")("fname");
+  var formNode2 = document.getElementById("myForm")("lname");
+  var formNode3 = document.getElementById("myForm")("fav_food");
+  if (formNode==null || x=="")
+  {
+    alert("First name must be filled out");
+  }
+  if (formNode2==null || x=="")
+  {
+    alert("Last name must be filled out");
+  }
+  if (formNode3==null || x=="")
+  {
+    alert("Fave food name must be filled out");
+  }
   // When the form is submitted, execute the following function.
   formNode.addEventListener("submit", validateForm, false);
+  formNode2.addEventListener("submit", validateForm, false);
+  formNode3.addEventListener("submit", validateForm, false);
   // Notice how the identifier `validateForm` itself is passed, not the
   // return value from calling the `validateForm` function.
   // eg. validateForm vs validateForm().
@@ -70,7 +86,7 @@ window.onload = function(event) {
 </head>
 <body>
 
-<h1>My name is <span id="fullName">_______</span> and I like to eat <span id="favoriteFood">_______</span>.</h1>
+<h1>My name is <span id="fullName">First Name Last Name</span> and I like to eat <span id="favoriteFood">Favorite  Food</span>.</h1>
 <div class="errors" style="display: none;">
   <h2>Error</h2>
   <p class="error"></p>
