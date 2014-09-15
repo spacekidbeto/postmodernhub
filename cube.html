@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shanky the Creeper</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: #fff;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+	<script>
+    	var camera;
+		var scene;
+		var renderer;
+		var cube;
+
+		init();
+		move();
+		function init() 
+		{
+    	scene = new THREE.Scene();
+    	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000);
+ 		//so it looks like its shiny 
+    	var light = new THREE.DirectionalLight( 0xffffff );
+	    light.position.set( 0, 1, 1 ).normalize();
+    	scene.add(light);
+    	var geometry = new THREE.BoxGeometry( 10, 10, 10);
+		var material = new THREE.MeshPhongMaterial( { texture: THREE.ImageUtils.loadTexture('mnc.jpg') }); 
+    	//make cube appear
+    	cube = new THREE.Mesh(geometry, material );
+    	cube.position.z = -50;
+    	scene.add( cube );
+ 		//magic 
+    	renderer = new THREE.WebGLRenderer();
+    	renderer.setSize( window.innerWidth, window.innerHeight );
+    	document.body.appendChild( renderer.domElement );
+ 		//call to resize
+    	window.addEventListener( 'resize', resize, false );
+    	render();
+		}
+ 		//simple rotation of the x and y axis updating slowly
+		function move() 
+		{
+    	cube.rotation.x += .05;
+    	cube.rotation.y += .05;
+    	render();
+    	requestAnimationFrame( move );
+		}
+ 		//magic happens here
+		function render() 
+		{
+    	renderer.render(scene, camera);
+		}
+ 		//as I shrink or extend the window, the cube adapts
+		function resize() 
+		{
+    	camera.aspect = window.innerWidth / window.innerHeight;
+    	camera.updateProjectionMatrix();
+    	renderer.setSize( window.innerWidth, window.innerHeight );
+    	render();
+		}
+	</script>
+  </body>
+</html>
