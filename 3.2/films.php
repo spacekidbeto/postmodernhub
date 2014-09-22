@@ -9,14 +9,16 @@ $results = $mysqli->query("SELECT id, title FROM examples")
 <html lang = "en-US"
 <head>
 	<title>Films</title>
+	<p><a href="add_film.php">[+] Add a new film</a></p>
 </head>
 <body>
 <h1>Films</h1>
 <ul>
 <? while($row = $results->fetch_assoc()){ ?>
 <li><?= $row["id"] . " " . $row["title"] ?><a href="film_details.php?film_id=1"></li>
+$mysqli->close();
 <? } ?>	
 </li>
 </body>
 </html>
-$mysqli->close();
+
