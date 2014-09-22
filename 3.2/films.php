@@ -13,11 +13,17 @@ $results = $mysqli->query("SELECT id, title FROM examples")
 </head>
 <body>
 <h1>Films</h1>
+
+<p><a href="add_film.php">[+] Add a new film</a></p>
 <ul>
 <? while($row = $results->fetch_assoc()){ ?>
 <li><?= $row["id"] . " " . $row["title"] ?><a href="film_details.php?film_id=1"></li>
+<<<<<<< HEAD
 $mysqli->close();
 <? } ?>	
+=======
+<? } $mysqli->close();?>	
+>>>>>>> FETCH_HEAD
 </li>
 </body>
 </html>
