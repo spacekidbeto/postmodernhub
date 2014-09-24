@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <title>Add a New Film</title>
-</head>
-<body>
-  <h1>Add a New Film</h1>
-
-<form action="add_film.php" method="POST">
-  <label for="title">Film Title</label>
-  <input type="text" name="title" />
-  <input type="submit" value="Add Film" />
-</form>
-
-
-<p><small><a href="src.php">Back to list</a></p>
-</body>
-</html>
+<?
+include("db_.php");
+$title = $_POST["title"];
+$sql = "INSERT INTO examples(title) VALUES('" . $title . "');";
+$db->query($sql);
+$db->close();
+$flash = "Added movie titled " . $title;
+header("Location: http://hernandez.humanoriented.com/src.php?flash=" . urlencode($flash));
+?>
