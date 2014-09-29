@@ -6,15 +6,15 @@
 <body>
 	<h1 align="center" <font color = "blue" >Rolling Stone's Top 100 Albums Of All Time</font></h1>
 	<form action="">
-		<select>
+		<select name="sort_by">
 			<option value="">Sort By</option>
-			<option value="1">Rank (default)</option>
-			<option value="2">Name</option>
-			<option value="3">Year</option>
+			<option value="rank" selected>Rank</option>
+			<option value="name">Name</option>
+			<option value="year">Year</option>
 		</select>
 	</form>
 	<form action="">
-		<select>
+		<select name="highlight">
 			<option value="">Select A Rank Highlight</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
