@@ -27,9 +27,13 @@ class Albums
     how_to_sort_by = request.params["sort_by"]
     ranking = request.params["highlight"].to_i
     SQLite3::Database.new("albums.sqlite3.db") do |db| 
-    db.execute("SELECT * FROM albums") do |row|
-    @album = rank, name, year
+    db.execute("SELECT * FROM albums")
     end
+    child_Alb = Album.new
+    child_Alb.rank=rank
+    child_Alb.name=name
+    child_Alb.year=year       
+    arrAlbs.push(child_Alb)
     exec
     
     def exec
