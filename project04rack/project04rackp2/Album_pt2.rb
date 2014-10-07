@@ -14,5 +14,3 @@ class Album
   property :title, String
   property :year, Integer
 end
-
-@albums = Album.al
