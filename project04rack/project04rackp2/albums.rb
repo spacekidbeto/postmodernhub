@@ -13,7 +13,7 @@ end
 
 post “/list” do
   @sort_order = params[:sort_by]
-  @highlight = params[:ranks]
+  @highlight = params[:ranks].to_i
   @albums = Album.all(:order => @sort_order.to_sym)
   erb :list
 end
