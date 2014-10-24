@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @board.title %>
+</p>
+
+<p>
+  <strong>Transcript:</strong>
+  <%= @board.transcript %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @board.length %>
+</p>
+
+<p>
+  <strong>Audiofile:</strong>
+  <%= @board.audiofile %>
+</p>
+
+<p>
+  <strong>Recording date:</strong>
+  <%= @board.recording_date %>
+</p>
+
+<%= link_to 'Edit', edit_board_path(@board) %> |
+<%= link_to 'Back', boards_path %>
+
+<p>
+  <strong>Comments:</strong>
+  <%= form_tag :comment do %>
+  <%= text_field :comment, :body %>
+  <%= submit_tag "Add Comment" %> 
+  <% end %>
+  <% @sound_bite.comments.each do |comment|  %>
+  <%= comment.body %>
+  <% end %>
+</p>

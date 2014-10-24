@@ -11,11 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017073826) do
+ActiveRecord::Schema.define(version: 20141022021309) do
 
-  create_table "articles", force: true do |t|
+  create_table "boards", force: true do |t|
     t.string   "title"
-    t.text     "text"
+    t.string   "transcript"
+    t.integer  "length"
+    t.binary   "audiofile"
+    t.datetime "recording_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", force: true do |t|
+    t.string   "body"
+    t.integer  "sound_bite_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sound_bites", force: true do |t|
+    t.string   "title"
+    t.string   "transcript"
+    t.integer  "length"
+    t.binary   "audiofile"
+    t.datetime "recording_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
