@@ -14,6 +14,7 @@ class SoundBitesController < ApplicationController
   end
 
   def edit
+    @sound_bite = SoundBite.find(params[:id])
   end
 
   def create

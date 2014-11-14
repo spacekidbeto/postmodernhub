@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :sound_bites
   resources :comments
 
-
+  root 'sound_bites#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

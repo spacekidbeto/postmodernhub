@@ -25,26 +25,17 @@
   <%= @sound_bite.recording_date %>
 </p>
 
-<p>
-  <strong>Post comment:</strong>
-  <% @sound_bite.comments do |comment| %>
-  <p>
-    <%= comment.body %>
-  </p>
-<% end %>
-</p>
-
 <%= link_to 'Edit', edit_sound_bite_path(@sound_bite) %> |
 <%= link_to 'Back', sound_bites_path %>
 
-<p>
-  <strong>Comments:</strong>
-  <%= form_tag :comment do %>
-  <%= text_field :comment, :body %>
-  <%= submit_tag "Add Comment" %> 
-  <% end %>
-  <% @sound_bite.comments.each do |comment|  %>
-  <%= comment.body %>
-  <% end %>
-</p>
+<h2>Comments</h2>
+<%= form_tag :comment do %>
+<%= text_field :comment, :body %>
+<%= submit_tag "Add Comment" %> 
+<% end %>
+<% @sound_bite.comments.each do |comment|  %>
+<%= comment.body %>
+<p></p>
+<% end %>
+
 

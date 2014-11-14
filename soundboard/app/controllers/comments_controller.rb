@@ -1,8 +1,14 @@
 class CommentsController < ApplicationController
   def create
-  	puts params[:comment][:body]
-  	@comment = Comment.new(params[:comment])
-  	@comment.save
+  	comment = Comment.new(comment_params)
+  	comment.save
+  	redirect_to sound_bite_path(comment.sound_bite)
+  end
+
+  private
+
+  def sound_bite_params
+  	params.require(:comment).permit(:body, :sound_bite_id)
   end
 
 end

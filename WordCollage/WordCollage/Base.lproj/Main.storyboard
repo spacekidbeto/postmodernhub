@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordCollage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Color Wiz" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0P-fp-XHG">
+                                <rect key="frame" x="86" y="89" width="242" height="171"/>
+                                <color key="backgroundColor" red="0.78504548281753905" green="0.0" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="LucidaGrande" family="Lucida Grande" pointSize="50"/>
+                                <color key="textColor" red="0.11247340931456318" green="0.22793136876019304" blue="0.81419836956521741" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eux-3Q-ebX">
+                                <rect key="frame" x="170" y="209" width="75" height="30"/>
+                                <state key="normal" title="Once you go...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeBackgroundColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4G-aA-FeB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ie-Af-58i">
+                                <rect key="frame" x="177" y="268" width="60" height="30"/>
+                                <state key="normal" title="Time Machine">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="revertBackgroundColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9h-qD-CZl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-hq-Umm">
+                                <rect key="frame" x="191" y="117" width="46" height="30"/>
+                                <state key="normal" title="I Dare You To Touch Me...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomBackgroundColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5a8-fz-Qas"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMw-U6-3ze">
+                                <rect key="frame" x="191" y="358" width="46" height="30"/>
+                                <state key="normal" title="Don't Touch">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="secret:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuD-aw-hUN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eux-3Q-ebX" secondAttribute="centerX" id="Cc5-NG-w3b"/>
+                            <constraint firstAttribute="centerY" secondItem="3Ie-Af-58i" secondAttribute="centerY" constant="-50" id="Cm6-Dk-DeA"/>
+                            <constraint firstAttribute="centerY" secondItem="eux-3Q-ebX" secondAttribute="centerY" id="DVP-5u-FQX"/>
+                            <constraint firstAttribute="centerX" secondItem="3Ie-Af-58i" secondAttribute="centerX" id="Ex0-Yi-78J"/>
+                            <constraint firstAttribute="centerY" secondItem="ZMw-U6-3ze" secondAttribute="centerY" constant="-70" id="RaF-T3-5cu"/>
+                            <constraint firstAttribute="centerY" secondItem="bCf-hq-Umm" secondAttribute="centerY" constant="30" id="Uk1-72-NGm"/>
+                            <constraint firstAttribute="centerX" secondItem="bCf-hq-Umm" secondAttribute="centerX" id="fpY-w9-fQF"/>
+                            <constraint firstAttribute="centerX" secondItem="W0P-fp-XHG" secondAttribute="centerX" id="mZO-m7-6WG"/>
+                            <constraint firstAttribute="centerY" secondItem="W0P-fp-XHG" secondAttribute="centerY" constant="90" id="ydF-iZ-I7p"/>
+                            <constraint firstAttribute="centerX" secondItem="ZMw-U6-3ze" secondAttribute="centerX" id="ys7-an-jnj"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
